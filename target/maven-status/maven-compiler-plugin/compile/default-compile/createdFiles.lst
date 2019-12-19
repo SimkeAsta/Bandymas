@@ -1,9 +1,9 @@
-lt/bandymas/entities/NewProductCommand.class
 lt/bandymas/controllers/ProductController.class
+lt/bandymas/entities/NewProductCommand.class
 lt/bandymas/services/ProductService.class
+lt/bandymas/entities/Product.class
+lt/bandymas/repositories/ProductRepository.class
+lt/bandymas/HelloController$Result.class
 lt/bandymas/HelloController.class
 lt/bandymas/AppConfig.class
-lt/bandymas/repositories/ProductRepository.class
 lt/bandymas/App.class
-lt/bandymas/HelloController$Result.class
-lt/bandymas/entities/Product.class

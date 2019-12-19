@@ -13,7 +13,7 @@ public class NewProductCommand {
 	private Double price;
 	private Integer quantity;
 
-	public NewProductCommand(@NotNull(message = "Product title is required!") String title, String image, String description, Double price, Integer quantity) {
+	public NewProductCommand(String title, String image, String description, Double price, Integer quantity) {
 		this.title = title;
 		this.image = image;
 		this.description = description;

@@ -28,9 +28,9 @@ public class ProductController {
 		return productService.getProducts();
 	}
 
-	@RequestMapping(value = "/{productTitle}", method = RequestMethod.GET)
-	public Product getProductByTitle(String productTitle) {
-		return productService.findProductByTitle(productTitle);
+	@RequestMapping(value = "/{title}", method = RequestMethod.GET)
+	public Product getProductByTitle(String title) {
+		return productService.findProductByTitle(title);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
@@ -43,16 +43,16 @@ public class ProductController {
 		return productService.addProduct(cmd);
 	}
 
-	@RequestMapping(path = "/{productTitle}", method = RequestMethod.DELETE)
+	@RequestMapping(path = "/{title}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteProduct(@PathVariable String productTitle) {
-		productService.findProductByTitle(productTitle);
-		productService.deleteByTitle(productTitle);
+	public void deleteProduct(@PathVariable String title) {
+		productService.findProductByTitle(title);
+		productService.deleteByTitle(title);
 	}
 
-	@RequestMapping(path = "/{productTitle}", method = RequestMethod.PUT)
-	public Product updateProductByTitle(@PathVariable("productTitle") String productTitle, @RequestBody final NewProductCommand cmd) {
-		return productService.updateProduct(productTitle, cmd);
+	@RequestMapping(path = "/{title}", method = RequestMethod.PUT)
+	public Product updateProductByTitle(@PathVariable String title, @RequestBody final NewProductCommand cmd) {
+		return productService.updateProduct(title, cmd);
 	}
 
 }
